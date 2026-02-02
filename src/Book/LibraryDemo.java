@@ -15,10 +15,10 @@ public class LibraryDemo {
         // this is not allowed anymore
         // We have made the attribute as private
         // Private attributes can only be accessed inside the class
-        book1.price = 50;
+//        book1.price = 50;
         // solution
         book1.setPrice(50);
-        book1.numberOfPages = 464;
+//        book1.numberOfPages = 464;
         book1.isAvailable = true;
 
         // 1. Have to write multiple line again and again to initialise the values
@@ -37,10 +37,10 @@ public class LibraryDemo {
 //        book2.isAvailable = true;
 
         book1.displayInfo();
-        book1.borrow();
-        book1.borrow();
+//        book1.borrow();
+//        book1.borrow();
         book1.returnBook();
-        book1.borrow();
+//        book1.borrow();
 
         System.out.println();
     }

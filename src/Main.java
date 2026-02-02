@@ -37,6 +37,6 @@ public class Main {
                 464
         );
 
-        book1.title = "";
+//        book1.title = "";
     }
 }
