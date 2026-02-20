@@ -15,12 +15,12 @@ public class Client {
         Pair p1 = new Pair();
 
         List<Pair<Integer , String>> l = new ArrayList<>();
-        l.add(s);
+//        l.add(s);
         l.add(p);
 
 //        Collection
 //        List : ordered collection , index , duplicate
 //        Queue : holding elements prior to processing
-        Set
+//        Set
     }
 }
