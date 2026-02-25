@@ -7,7 +7,7 @@ public class ExceptionDemo {
         if(input % 5 == 0){
             throw new NullPointerException();
         } else if (input % 3 == 0){
-            throw new IllegalStateException();
+            throw new InsufficientBalanceException("The balance is not sufficient");
         } else if (input % 2 == 0){
 //             must be caught or declared to be thrown
             throw new SQLException();
