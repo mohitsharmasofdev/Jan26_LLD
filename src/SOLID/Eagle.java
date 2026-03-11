@@ -1,10 +1,14 @@
 package SOLID;
 
 public class Eagle extends Bird implements Flyable{
+    private FlyingBehaviour flyingBehaviour;
+
+    public Eagle(FlyingBehaviour flyingBehaviour){
+        this.flyingBehaviour = flyingBehaviour;
+    }
     @Override
     public void fly() {
-        System.out.println("Flying high!!");
-        // some more lines for the algo
+        flyingBehaviour.executeFlying();
     }
 
     @Override

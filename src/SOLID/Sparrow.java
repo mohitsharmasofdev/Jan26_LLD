@@ -1,6 +1,11 @@
 package SOLID;
 
 public class Sparrow extends Bird implements Flyable{
+    private FlyingBehaviour flyingBehaviour;
+
+    public Sparrow(FlyingBehaviour flyingBehaviour){
+        this.flyingBehaviour = flyingBehaviour;
+    }
     @Override
     public void makeSound() {
         System.out.println("Sparrow is producing sound");
@@ -8,6 +13,6 @@ public class Sparrow extends Bird implements Flyable{
 
     @Override
     public void fly() {
-        System.out.println("Flying Low!!");
+        flyingBehaviour.executeFlying();
     }
 }
