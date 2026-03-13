@@ -9,13 +9,13 @@ public class SoldItem {
     private boolean isExpress;
     private double discount;
 
-    public SoldItem(SoldItemHelper soldItemHelper){
+    public SoldItem(SoldItemBuilder soldItemBuilder){
         // validations of mandatory parameters + conditions in the constructor itself
-        if(soldItemHelper.getQuantity() == 0){
+        if(soldItemBuilder.getQuantity() == 0){
             throw new IllegalArgumentException("Quantity has to be greater than zero!");
         }
-        id = soldItemHelper.getId();
-        isExpress = soldItemHelper.isExpress();
+        id = soldItemBuilder.getId();
+        isExpress = soldItemBuilder.isExpress();
     }
     public int getId() {
         return id;
@@ -63,5 +63,9 @@ public class SoldItem {
 
     public void setDiscount(double discount) {
         this.discount = discount;
+    }
+
+    public static SoldItemBuilder getBuilder(){
+        return new SoldItemBuilder();
     }
 }

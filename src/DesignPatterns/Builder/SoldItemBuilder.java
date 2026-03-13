@@ -1,6 +1,6 @@
 package DesignPatterns.Builder;
 
-public class SoldItemHelper {
+public class SoldItemBuilder {
     private int id;
     private String item;
     private double price;
@@ -8,8 +8,13 @@ public class SoldItemHelper {
     private boolean isExpress;
     private double discount;
 
-    public void setId(int id) {
+    public SoldItem build(){
+//        SoldItem soldItem = new SoldItem(soldItemHelper);
+        return new SoldItem(this);
+    }
+    public SoldItemBuilder setId(int id) {
         this.id = id;
+        return this;
     }
 
     public int getId() {
@@ -36,23 +41,28 @@ public class SoldItemHelper {
         return discount;
     }
 
-    public void setItem(String item) {
+    public SoldItemBuilder setItem(String item) {
         this.item = item;
+        return this;
     }
 
-    public void setPrice(double price) {
+    public SoldItemBuilder setPrice(double price) {
         this.price = price;
+        return this;
     }
 
-    public void setQuantity(int quantity) {
+    public SoldItemBuilder setQuantity(int quantity) {
         this.quantity = quantity;
+        return this;
     }
 
-    public void setExpress(boolean express) {
+    public SoldItemBuilder setExpress(boolean express) {
         isExpress = express;
+        return this;
     }
 
-    public void setDiscount(double discount) {
+    public SoldItemBuilder setDiscount(double discount) {
         this.discount = discount;
+        return this;
     }
 }
