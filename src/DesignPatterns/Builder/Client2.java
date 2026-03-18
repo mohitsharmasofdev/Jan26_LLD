@@ -11,13 +11,13 @@ public class Client2 {
 //                        .setAge(5)
 //                        .setBatchName("Apr2026");
 
-        Student student =
-                Student
-                        .getBuilder()
-                        .setId(1)
-                        .setAge(5)
-                        .setBatchName("Apr2026")
-                        .build();
+//        Student student =
+//                Student
+//                        .getBuilder()
+//                        .setId(1)
+//                        .setAge(5)
+//                        .setBatchName("Apr2026")
+//                        .build();
 
 //        Student student1 = new Student(studentBuilder);
 

@@ -58,7 +58,7 @@ public class Student {
         this.gradYear = gradYear;
     }
 
-    static class StudentBuilder {
+    private static class StudentBuilder {
         private int id;
         private String name;
         private String batchName;
