@@ -18,6 +18,7 @@ public class Client {
         Character character = new Character("1", "XYZ",100 , "SomeImage");
         HumanCharacter humanCharacter = new HumanCharacter("2", "Hume", 50, "some");
 
+
         CharacterRegistry characterRegistry = new CharacterRegistry();
 
         characterRegistry.register("Normal" , character);

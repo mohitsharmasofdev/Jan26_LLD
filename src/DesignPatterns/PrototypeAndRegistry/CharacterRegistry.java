@@ -10,6 +10,7 @@ public class CharacterRegistry {
     }
 
     void register(String key,  Character character){
+        // proper validations
         characterRegistry.put(key , character);
     }
 

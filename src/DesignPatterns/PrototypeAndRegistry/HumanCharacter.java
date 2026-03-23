@@ -8,6 +8,7 @@ public class HumanCharacter extends Character{
 
     public HumanCharacter(HumanCharacter other) {
         super(other);
+//        this.id = other.id;
         this.age = other.age;
         // copy anything else as well
     }

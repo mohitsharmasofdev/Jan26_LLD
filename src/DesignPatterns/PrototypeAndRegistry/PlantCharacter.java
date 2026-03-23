@@ -8,4 +8,9 @@ public class PlantCharacter extends Character{
     public PlantCharacter(PlantCharacter other) {
         super(other);
     }
+
+    @Override
+    public Character copy() {
+        return new PlantCharacter(this);
+    }
 }
