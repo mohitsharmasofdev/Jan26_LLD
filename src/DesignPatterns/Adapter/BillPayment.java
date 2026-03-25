@@ -1,10 +1,10 @@
 package DesignPatterns.Adapter;
 
 public class BillPayment {
-    public void payBill(String billNumber , int amount, YesBankAPI yesBankAPI){
+    public void payBill(String billNumber , int amount, BankAPI bankAPI){
         Boolean isBillPending = true;
-        if(isBillPending && yesBankAPI.getBalance() >= amount){
-            yesBankAPI.transfer(amount);
+        if(isBillPending && bankAPI.balanceCheck() >= amount){
+            bankAPI.deductMoney(amount);
             System.out.println("Bill Paid successfully!");
             return;
         } else if(!isBillPending){

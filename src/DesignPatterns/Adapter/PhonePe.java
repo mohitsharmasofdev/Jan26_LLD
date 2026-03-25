@@ -1,21 +1,22 @@
 package DesignPatterns.Adapter;
 
 public class PhonePe {
-    private YesBankAPI yesBankAPI;
+    private BankAPI bankAPI;
     private FastTagRecharge fastTagRecharge;
     private BillPayment billPayment;
 
-    public PhonePe(){
-        yesBankAPI = new YesBankAPI();
+    public PhonePe(BankAPI bankAPI){
+//        bankAPI = new YesBankAPIAdapter();
+        this.bankAPI = bankAPI;
         fastTagRecharge = new FastTagRecharge();
         billPayment = new BillPayment();
     }
 
     public void rechargeFastTag(int amount){
-        fastTagRecharge.recharge(amount, yesBankAPI);
+        fastTagRecharge.recharge(amount, bankAPI);
     }
 
     public void payBill(String billNumber , int amount){
-        billPayment.payBill(billNumber , amount , yesBankAPI);
+        billPayment.payBill(billNumber , amount , bankAPI);
     }
 }
